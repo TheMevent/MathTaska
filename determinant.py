@@ -1,17 +1,5 @@
 import random
 
-def rowAndIdelete(x, index):
-    new = []
-    for i in range(1, len(x)):
-        a = []
-        for j in range(len(x[0])):
-            if j != index:
-                a.append(x[i][j])
-        new.append(a)
-    return new
-
-
-
 def det(x):
     if len(x) == 1:
         return x[0][0]
@@ -23,6 +11,17 @@ def det(x):
         d += s * x[0][i] * det(new)
         s = -s
     return d
+
+def rowAndIdelete(x, index):
+    new = []
+    for i in range(1, len(x)):
+        a = []
+        for j in range(len(x[0])):
+            if j != index:
+                a.append(x[i][j])
+        new.append(a)
+    return new
+
 
 l = 3
 
